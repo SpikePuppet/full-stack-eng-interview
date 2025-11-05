@@ -1,13 +1,28 @@
 {
   "name": "full-stack-eng-interview",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Model comparison pipeline for testing multiple AI models via OpenRouter",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "tsx src/index.ts",
+    "dev": "tsx --watch src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.11.1"
+  "packageManager": "pnpm@10.11.1",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "p-limit": "^5.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "csv-parser": "^3.2.0",
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
 }
